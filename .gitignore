@@ -23,7 +23,8 @@ bin/
 application-database.properties
 
 
-
+### Generated -> Q~ ###
+/src/main/generated/
 
 
 #기본적으로 gitnore하면 좋은 것들 밑에..
