@@ -25,16 +25,18 @@ repositories {
 }
 
 dependencies {
+    //implementation ('org.springframework.boot:spring-boot-starter-web') {
+    //    exclude group: 'org.springframework.boot', module: 'spring-boot-starter-tomcat'
+    //}
     //mysql - 실제 사용 db
     runtimeOnly 'com.mysql:mysql-connector-j'
-    //h2
-    runtimeOnly 'com.h2database:h2'
+
     //devtools
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     //jpa
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     //jdbc
-    implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+    //implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
     //thymeleaf
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     //spring web
@@ -42,7 +44,7 @@ dependencies {
     //websocket
     implementation 'org.springframework.boot:spring-boot-starter-websocket'
     //security
-    implementation 'org.springframework.boot:spring-boot-starter-security'
+    //implementation 'org.springframework.boot:spring-boot-starter-security'
     //mybatis
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.3.0'
 
@@ -58,7 +60,7 @@ dependencies {
     testAnnotationProcessor 'org.projectlombok:lombok'
     
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.security:spring-security-test'
+    //testImplementation 'org.springframework.security:spring-security-test'
 
     //vaild 유효성
     implementation 'org.springframework.boot:spring-boot-starter-validation'
@@ -68,6 +70,14 @@ dependencies {
             "javax.persistence:javax.persistence-api",
             "javax.annotation:javax.annotation-api",
             "com.querydsl:querydsl-apt:${queryDslVersion}:jpa")
+
+
+
+    //implementation group: 'org.json', name: 'json', version: '20211205'
+    //implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.0.1'
+
+    //json-simple
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
 
 }
 
