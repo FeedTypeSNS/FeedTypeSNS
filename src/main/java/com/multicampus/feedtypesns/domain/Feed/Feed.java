@@ -24,17 +24,14 @@ public class Feed {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    //Users객체는 프로필 사진, 아이디등을 사용하기 때문에 갖고있어야함
     @ManyToOne
     @JoinColumn(name="user_id")
     private Users users;
 
-//    Group객체는 번호빼고는 필요가 없어서 들고있지 않아도됨
+//    Group_id는 selectbox에서 선택하는 값으로 group을 저장하려면 다시 조회해서 들고와야해서 일단 id만 저장
 //    @OneToOne
 //    @JoinColumn(name="group_id")
 //    private Group group;
-
-    //Group은 id로만 저장하면된다.
     @Column(nullable = false, name="group_id")
     private long groupId;
 
